@@ -1,31 +1,24 @@
-import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import styled from "styled-components";
-import GetCharacters from "../services/GetCharacter";
-import { characterDataType } from "../types/characterDataType";
 import ButtonWrap from "./common/ButtonWrap";
+import Header from "./Header/Header";
 import MappedCharacters from "./MappedCharacters";
+import { SearchBar } from "./SearchBar/SearchBar";
 
 export default function ContentBox() {
-  const [page, setPage] = useState(1);
-  const { loading, data } = useQuery<characterDataType>(GetCharacters(page));
-
-  if (loading || !data) return <>Carregando</>;
-
   return (
-    <Container>
-      <MappedCharacters data={data.characters.results} />
-      <ButtonWrap
-        page={page}
-        setPage={setPage}
-      />
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <MappedCharacters />
+        <ButtonWrap />
+      </Container>
+    </>
   );
 }
 
 const Container = styled.main`
   width: 90%;
   margin-inline: auto;
-  padding-top: 120px;
   padding-bottom: 40px;
 `;
