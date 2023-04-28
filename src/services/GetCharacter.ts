@@ -1,9 +1,18 @@
 import { gql } from "@apollo/client";
 
-export default function GetCharacters(page: number) {
+export default function GetCharacters({ page, name, status }: QueryType) {
+  let filter = "";
+  if (name.length > 0 && status.length > 0) {
+    filter = `name: "${name}", status: "${status}"`;
+  } else if (name.length > 0) {
+    filter = `name: "${name}"`;
+  } else if (status.length > 0) {
+    filter = `status: "${status}"`;
+  }
+
   return gql`
     query {
-      characters(page: ${page}) {
+      characters(page: ${page}, filter: { ${filter} } ) {
         results {
           name
           image
@@ -20,3 +29,9 @@ export default function GetCharacters(page: number) {
     }
   `;
 }
+
+type QueryType = {
+  page: number;
+  name: string;
+  status: string;
+};
