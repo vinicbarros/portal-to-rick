@@ -61,7 +61,7 @@ table {
   html,
   body {
     height: var(--doc-heigth);
-    background-color: #f9fffc;
+    background-color: #f0f2eb;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   }
   * {
