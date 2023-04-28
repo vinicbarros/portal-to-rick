@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  portal-to-rick-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portal-to-rick
+    ports:
+      - 8000:8000
+    working_dir: /app
+    command: npm run dev
