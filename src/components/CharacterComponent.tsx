@@ -14,6 +14,14 @@ export default function CharacterComponent({ data }: { data: ICharacter }) {
           <StatusSignal status={data.status} />
           <Status>{`${data.status} - ${data.species}`}</Status>
         </StatusWrap>
+        <InfoWrap>
+          <TitleInfo>Last known location:</TitleInfo>
+          <DataInfo>{data.location.name}</DataInfo>
+        </InfoWrap>
+        <InfoWrap>
+          <TitleInfo>First seen in:</TitleInfo>
+          <DataInfo>{data.origin.name}</DataInfo>
+        </InfoWrap>
       </InfoBox>
     </CharacterBox>
   );
@@ -22,7 +30,7 @@ export default function CharacterComponent({ data }: { data: ICharacter }) {
 const CharacterBox = styled.section`
   width: 230px;
   background-color: #ffffff;
-  height: 400px;
+  height: 460px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
@@ -46,7 +54,7 @@ const Name = styled.h1`
 const StatusWrap = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 8px;
 `;
 
 const StatusSignal = styled.div<StatusType>`
@@ -67,3 +75,19 @@ const Status = styled.h2`
 type StatusType = {
   status: string;
 };
+
+const InfoWrap = styled.div`
+  margin-top: 20px;
+`;
+
+const TitleInfo = styled.h2`
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d0d0d;
+  margin-bottom: 6px;
+`;
+
+const DataInfo = styled.h4`
+  color: #6e6f72;
+  font-size: 17px;
+`;
