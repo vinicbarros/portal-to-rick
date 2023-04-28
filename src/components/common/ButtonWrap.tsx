@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { InfosData } from "../../contexts/InfosContext";
 
-export default function ButtonWrap({
-  page,
-  setPage,
-}: {
-  page: number;
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-}) {
+export default function ButtonWrap() {
+  const { page, setPage } = InfosData();
+
   return (
     <Container>
       <Button
@@ -20,7 +17,7 @@ export default function ButtonWrap({
         <GrLinkPrevious size={20} />
       </Button>
 
-      <PageCount>Página {page}</PageCount>
+      <PageCount>Page {page}</PageCount>
 
       <Button
         type="button"
