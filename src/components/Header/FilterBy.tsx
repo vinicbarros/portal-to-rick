@@ -37,6 +37,11 @@ const Select = styled.select`
   color: #5e5c5c;
   font-size: 16px;
   padding: 8px;
+
+  @media screen and (max-width: 450px) {
+    width: 90px;
+    font-size: 14px;
+  }
 `;
 
 const Container = styled.section`

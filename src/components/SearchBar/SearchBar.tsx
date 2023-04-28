@@ -51,6 +51,10 @@ const ContainerSearch = styled.div`
   font-family: "Poppins";
   width: 260px;
   position: relative;
+
+  @media screen and (max-width: 450px) {
+    width: 180px;
+  }
 `;
 
 interface ISearchInput {
@@ -71,10 +75,18 @@ const SearchInputs = styled.div`
     border: none;
     border-radius: 8px;
     font-size: 18px;
+
+    @media screen and (max-width: 450px) {
+      width: 140px;
+    }
   }
   input::placeholder {
     color: #5e5c5c;
     font-size: 16px;
+
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+    }
   }
   input:focus {
     outline: none;

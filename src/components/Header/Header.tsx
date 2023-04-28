@@ -28,6 +28,12 @@ const HeaderContent = styled.header`
   flex-direction: column;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  @media screen and (max-width: 450px) {
+    height: 300px;
+    background-position-y: 120px;
+    background-size: 400px;
+  }
 `;
 
 const Title = styled.h1`
@@ -40,6 +46,14 @@ const Title = styled.h1`
   text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 40px;
+  }
 `;
 
 const FilterWrap = styled.div`
@@ -47,4 +61,10 @@ const FilterWrap = styled.div`
   position: absolute;
   right: 40px;
   bottom: 20px;
+
+  @media screen and (max-width: 450px) {
+    position: initial;
+    justify-content: center;
+    padding-top: 50px;
+  }
 `;
