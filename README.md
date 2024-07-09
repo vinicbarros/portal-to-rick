@@ -5,9 +5,6 @@
 <hr>
 <h4 align=center>Um projeto feito em ReactJS + GraphQL que lista os personagens de Rick and Morty</h4>
 <br>
-<h4 align=center>Esse projeto é parte de um processo seletivo da ArenaCode para a vaga de Desenvolvedor.</h4>
-
-<h4 align=center>O objetivo do projeto técnico era criar um projeto React com Typescript e GraphQL.</h4>
 
 <div align=center style="display: flex; flex-direction: row; justify-content: center; gap: 5%;">
   <div>
@@ -17,14 +14,6 @@
     <img width="500px" src="https://i.imgur.com/SkbcOPQ.png">
   </div>
 </div>
-
-## Requisitos do teste:
-
-- [x] Listagem de personagens com Nome, Status, Espécie, Localização e Primeira vez visto
-- [x] Círculo com cor de acordo com o status do personagem
-- [x] Paginação
-- [x] Filtro por status
-- [x] Barra de pesquisa por nome
 
 ## Funcionalidades da aplicação:
 
